@@ -1,5 +1,5 @@
 import pygame
-from constants import *
+from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from player import Player
 
 
@@ -23,12 +23,12 @@ def main():
             
         updatable.update(dt)
         screen.fill("black")
-        
+
         for obj in drawable:
             obj.draw(screen)
-
-        pygame.display.flip()
         
+        pygame.display.flip()
+
         # limit framerate to 60 FPS
         dt = clock.tick(60) / 1000
         
